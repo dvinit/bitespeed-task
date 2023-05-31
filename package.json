@@ -1,0 +1,21 @@
+{
+  "name": "bitespeed-contact",
+  "version": "1.0.0",
+  "description": "A nodejs server of creating ,updating and linking contacts.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mysql",
+    "contacts"
+  ],
+  "author": "Vineet Deshmukh",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.4",
+    "express": "^4.18.2",
+    "mysql": "^2.18.1",
+    "util": "^0.12.5"
+  }
+}

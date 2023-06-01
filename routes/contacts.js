@@ -6,9 +6,9 @@ const { Contactinfo } = require('../models/contactinfo');
 
 
 var con = mysql.createConnection({
-    host: "localhost",
-    user: "vinit",
-    password: "1234",
+    host: process.env.PRIVATE_HOST,
+    user: process.env.USER_NAME,
+    password: process.env.KEY,
     database: "CONTACTS_DB"
   });
 

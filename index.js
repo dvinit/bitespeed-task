@@ -7,9 +7,9 @@ app.use(express.json());
 app.use('/api/identify', contacts);
 
 var con = mysql.createConnection({
-    host: "localhost",
-    user: "vinit",
-    password: "1234"
+    host: process.env.PRIVATE_HOST,
+    user: process.env.USER_NAME,
+    password: process.env.KEY
   });
   
   con.connect(function(err) {

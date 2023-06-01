@@ -12,6 +12,7 @@ var con = mysql.createConnection({
     password: process.env.KEY
   });
   
+  try{
   con.connect(function(err) {
     if (err) throw err;
     console.log("Connected to mysql database ... now creating databases and tables");
@@ -26,7 +27,11 @@ var con = mysql.createConnection({
       });  
 
   });
-
+  }
+  catch(ex){
+console.log("Couldn't connect to mysql database...");
+console.log(ex);
+  }
    const port= process.env.PORT || 3000 ;
 app.listen(port ,() => console.log(`Listening on port ${port}`));
 

@@ -6,11 +6,17 @@ const app = express();
 app.use(express.json());
 app.use('/api/identify', contacts);
 
+try{
 var con = mysql.createConnection({
     host: process.env.PRIVATE_HOST,
     user: process.env.USER_NAME,
     password: process.env.KEY
   });
+}
+catch(ex){
+console.log("Couldn't connect to mysql database...");
+console.log(ex);    
+}
   
   try{
   con.connect(function(err) {
